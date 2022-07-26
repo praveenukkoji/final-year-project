@@ -1,0 +1,40 @@
+<header>
+    <section class='hero-header'>
+        <h1>SMART CLASSIFICATION</h1>
+        <h2>Want to know what type of disease your plant affected with, then Upload a images of (Tomato, Potato, etc) plants and get to know the disease it posses and the remedies and pratical video explanation to prevent further loss of plant.</h2>
+        
+        <div class="button-container">
+            <input id="imagesrc" type="file" (change)="onChange($event)">
+            <img id="blah" alt="your image" width="400" height="300" />
+        </div>
+        <div class="scan-btn">
+            <button type="button" class="btn btn-light" (click)="onUpload()" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Scan Me !!!</button>
+        </div>
+    </section>
+
+</header>
+  
+  <!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Plant Classification</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modalBody">
+            <p id="pn"><strong>Plant Name: </strong>{{plantName}}</p>
+            <p id="pd"><strong>Plant Disease: </strong>{{plantDisease}}</p>
+            <div>
+                <strong>Cure Steps: </strong>
+                <div *ngFor="let cure of cureSteps">
+                    <p>{{cure}}</p>
+                </div>
+            </div>
+            <p *ngIf="link" id="pc"><strong>Youtube Link: </strong><a href={{link}} target="_blank">Click here</a></p>
+        </div>
+      </div>
+    </div>
+  </div>

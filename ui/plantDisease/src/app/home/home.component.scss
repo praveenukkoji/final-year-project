@@ -1,0 +1,32 @@
+header {
+    height: 883px;
+    width: 100%;
+    text-align: center;
+    padding-top: 200px;
+    color: white;
+    overflow: hidden;
+    background: #C04848;
+    background-image: url('../../assets/bg-img.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    section {
+        padding: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    h2 {
+        margin-top: 40px;
+    }
+
+    .button-container {
+        margin-top: 40px;
+        padding-left:30%;
+        padding-right: 30%;
+    }
+
+    .scan-btn {
+        margin-top: 40px;
+    }
+}
